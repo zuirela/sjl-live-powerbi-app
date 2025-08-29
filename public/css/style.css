@@ -1,0 +1,135 @@
+/*
+ * SJL Live – Power BI web application styling.
+ *
+ * The colour palette is derived from the SJL Graafinen ohjeisto. The primary
+ * colour is Suomen sininen (#002E6D). Secondary colours include ice blue
+ * (#00ACD7), dark evening blue (#011D41), concrete grey (#CFCFCD) and
+ * gold ’95 (#8B6F4E). These colours provide a clean, modern and
+ * trustworthy look that aligns with SJL's brand guidelines.
+ */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #011D41;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styling */
+.header {
+  background-color: #002E6D; /* Suomen sininen */
+  color: #FFFFFF; /* Lumen valkoinen */
+  padding: 10px 0;
+}
+
+.header .brand h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header nav ul li.user {
+  margin-right: auto;
+}
+
+.hero {
+  padding: 40px 0;
+  background: #002E6D;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.hero h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.hero .btn {
+  background-color: #00ACD7; /* Ice blue */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.hero .btn:hover {
+  background-color: #011D41; /* Dark evening blue */
+}
+
+/* Dashboard list */
+.dashboards {
+  padding: 40px 0;
+}
+
+.dashboard-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-item .card {
+  background-color: #FFFFFF;
+  border: 1px solid #CFCFCD; /* Concrete grey */
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s ease-in-out;
+}
+
+.dashboard-item .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-item h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #002E6D;
+}
+
+.dashboard-item p {
+  margin: 0;
+  color: #011D41;
+}
+
+.report-container {
+  margin-top: 20px;
+}
+
+.warning {
+  color: #8B6F4E; /* Gold ’95 */
+  font-weight: bold;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #002E6D;
+  color: #FFFFFF;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
