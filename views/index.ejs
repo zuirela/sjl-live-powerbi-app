@@ -1,0 +1,28 @@
+<% layout('layout', { account: account, title: 'Koti' }); %>
+
+<section class="hero">
+  <h2>Keskeiset toiminnan mittarit</h2>
+  <p>Tervetuloa SJL Live -raportointisivulle. Kirjaudu sisään nähdäksesi Power BI -raportit reaaliajassa.</p>
+  <% if (!account) { %>
+    <p><a class="btn" href="/login">Kirjaudu sisään Microsoft-tunnuksella</a></p>
+  <% } %>
+</section>
+
+<% if (account) { %>
+  <section class="dashboards">
+    <h3>Raportit toimihenkilöryhmittäin</h3>
+    <ul class="dashboard-list">
+      <% Object.keys(reports).forEach(function(key) { %>
+        <% const rpt = reports[key]; %>
+        <li class="dashboard-item">
+          <a href="/group/<%= key %>">
+            <div class="card">
+              <h4><%= rpt.name %></h4>
+              <p>Siirry katsomaan raporttia</p>
+            </div>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </section>
+<% } %>
