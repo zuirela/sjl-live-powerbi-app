@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title || 'SJL Live' %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="brand">
+          <!-- Replace with actual logo image if available -->
+          <h1><a href="/">SJL Live</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <% if (account) { %>
+              <li class="user">Hei, <%= account.name || account.username %></li>
+              <li><a href="/logout">Kirjaudu ulos</a></li>
+            <% } else { %>
+              <li><a href="/login">Kirjaudu sisään</a></li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <%- body %>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <%= new Date().getFullYear() %> Suomen Jääkiekkoliitto (SJL). All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
